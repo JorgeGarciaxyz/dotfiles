@@ -1,5 +1,5 @@
 Git clone
-~~~~cp dotfiles/vim/-vimrc ~/
+cp dotfiles/vim/-vimrc ~/
 
 - Install fzf
 - Intsll Ag
