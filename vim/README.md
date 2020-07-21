@@ -1,5 +1,15 @@
-Git clone
-cp dotfiles/vim/-vimrc ~/
+### Create vimrc
+
+Mac
+```
+cp dotfiles/vim/.vimrc ~/
+```
+Linux
+```
+cp dotfiles/vim/.vimrc_linux ~/.vimrc
+```
+
+### Installation
 
 - Install fzf
 - Intsll Ag
