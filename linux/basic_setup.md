@@ -1,3 +1,10 @@
+## Essential stuff
+
+
+```
+pacman -S base-devel
+```
+
 ### Displays
 
 ```
