@@ -24,3 +24,7 @@ reload
 xbindkeys --poll-rc
 ```
 
+### Vim
+
+Use git
+https://www.vim.org/git.php
