@@ -53,3 +53,37 @@ xbindkeys --poll-rc
 
 Use git
 https://www.vim.org/git.php
+
+### Audio
+Pulse audio https://wiki.archlinux.org/index.php/PulseAudio
+
+Install
+```
+sudo pacman -S pulseaudio
+```
+
+#### One to rule them all
+
+Alsa utils https://www.archlinux.org/packages/extra/x86_64/alsa-utils/
+```
+sudo pacman -S alsa-utils
+alsamixer
+```
+
+GUI option
+```
+sudo pacman -S pavucontrol
+```
+
+Other GUI https://aur.archlinux.org/packages/gnome-alsamixer/
+
+Audio shortcuts 
+
+Copy this to `.xbindkeysrc`
+```
+"amixer -D pulse sset Master 5%-"
+Shift + F11
+
+"amixer -D pulse sset Master 5%+"
+Shift + F12
+```
