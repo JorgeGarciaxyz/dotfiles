@@ -11,18 +11,18 @@ cp dotfiles/vim/.vimrc_linux ~/.vimrc
 
 ### Installation
 
-1. Install fzf
+### 1. Install fzf
 
 **Linux:** package already installed? (at least on manjaro)
 
-2. Install Ag
+### 2. Install Ag
 
 **Linux:**
 ```
 sudo pacman -S the_silver_searcher
 ```
 
-3. Install Vundle
+### 3. Install Vundle
 
 Follow [Vundle Instructions](https://github.com/VundleVim/Vundle.vim)
 
@@ -31,7 +31,7 @@ Run Vundle Plugins install
 vim +PluginInstall +qall
 ```
 
-4. Install YouCompleteMe
+### 4. Install YouCompleteMe
 
 **Linux:**
 Install `sudo pacman -S libnghttp2` (or it will fail)
@@ -40,13 +40,13 @@ Install `sudo pacman -S libnghttp2` (or it will fail)
 Use AUR package https://aur.archlinux.org/packages/vim-youcompleteme-git/
 
 
-5.  Vundle plugins
+### 5.  Vundle plugins
 ```
 vim
 :PluginInstall
 ```
 
-6. Colors: Solarized Dark 8
+### 6. Colors: Solarized Dark 8
 
 Follow https://github.com/lifepillar/vim-solarized8
 
