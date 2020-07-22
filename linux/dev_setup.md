@@ -20,3 +20,21 @@ Config to sign commits automatically
 ```
 git config --global commit.gpgsign true
 ```
+
+## Postres
+```
+sudo pacman -S postgresql
+```
+
+## Docker
+```
+sudo pacman -S docker
+sudo pacman -S docker-compose
+```
+
+start/stop docker
+```
+sudo systemctl start docker.service
+sudo systemctl stop docker.service
+
+```
