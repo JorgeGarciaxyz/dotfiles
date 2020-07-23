@@ -95,9 +95,9 @@ Audio shortcuts
 
 Copy this to `.xbindkeysrc`
 ```
-"amixer -D pulse sset Master 5%-"
+"amixer -D pulse sset Master 5%- && pkill -RTMIN+10 i3blocks"
 Shift + F11
 
-"amixer -D pulse sset Master 5%+"
+"amixer -D pulse sset Master 5%+ && pkill -RTMIN+10 i3blocks"
 Shift + F12
 ```
