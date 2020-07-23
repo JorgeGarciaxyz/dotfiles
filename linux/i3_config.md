@@ -21,3 +21,10 @@ Set desired blocks using (ex)
 [memory]
 command=$SCRIPT_DIR/memory/memory
 ```
+
+### Link config files
+
+```
+ls -s linux/.config/i3/config ~/.config/i3/config
+ls -s linux/.config/i3blocks/config ~/.config/i3blocks/config
+```
