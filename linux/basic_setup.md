@@ -63,6 +63,11 @@ xbindkeys --poll-rc
 Use git
 https://www.vim.org/git.php
 
+```
+set EDITOR vim
+export EDITOR
+```
+
 ### Audio
 Pulse audio https://wiki.archlinux.org/index.php/PulseAudio
 
