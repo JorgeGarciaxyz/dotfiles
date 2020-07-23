@@ -37,7 +37,9 @@ markup=none
 
 [volume]
 command=$SCRIPT_DIR/volume/volume
-label=🔊
+label=<span foreground="#859900">🔊 </span>
+markup=pango
+color=#eee8d5
 interval=once
 signal=10
 #STEP=5%
@@ -47,7 +49,10 @@ signal=10
 # The type defaults to "mem" if the instance is not specified.
 [memory]
 command=$SCRIPT_DIR/memory/memory
-label=RAM/
+#label=RAM/
+label=<span foreground="#6c71c4">RAM </span>
+markup=pango
+color=#eee8d5
 separator=true
 interval=30
 
@@ -72,10 +77,11 @@ interval=30
 # If the instance is not specified, use the interface used for default route.
 # The address can be forced to IPv4 or IPv6 with -4 or -6 switches.
 [iface]
+command=$SCRIPT_DIR/iface/iface
 #IFACE=wlan0
-color=#00FF00
+color=#b58900
 interval=10
-separator=false
+separator=true
 
 [wifi]
 #INTERFACE=wlp3s0
@@ -114,6 +120,7 @@ interval=30
 #
 [time]
 label=🕛
+color=#eee8d5
 command=date '+%Y-%m-%d %H:%M:%S'
 interval=5
 
