@@ -5,6 +5,15 @@
 pacman -S base-devel
 ```
 
+### Run on startup
+
+Add the next line to `~/.xinitrc`
+
+```
+/path_to_this_repo/linux/xinitrc_commands.sh
+```
+
+
 ### Displays
 
 ```
