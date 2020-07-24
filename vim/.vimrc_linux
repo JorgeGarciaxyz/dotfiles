@@ -1,10 +1,4 @@
-"  ____ ____ ____ ____ ____ ____ ____ ____
-" ||e |||s |||n |||i |||l |||a |||r |||a ||
-" ||__|||__|||__|||__|||__|||__|||__|||__||
-" |/__\|/__\|/__\|/__\|/__\|/__\|/__\|/__\|
-"
-" esnilara's .vimrc file
-"
+" @JorgeGarciaxyz vimrc, based on @esnilara file https://github.com/esnilara/dotfiles/tree/master/vim
 "
 " ======================================================================
 " GENERAL SETTINGS
@@ -56,11 +50,7 @@ set shiftround                 " Use multiple of shiftwidth when indenting with 
 set smarttab                   " Insert tabs on the start of a line according to shiftwidth, not tabstop
 
 " Global copy to clipboard
-if has('macunix')
-  set clipboard=unnamed
-else
-  set clipboard=unnamedplud
-endif
+set clipboard^=unnamed,unnamedplus
 
 " Fish shell configuration
 "set shell=/bin/sh
@@ -171,9 +161,9 @@ endif
 " Set Theme
 " colorscheme onedark
 " colorscheme atom-dark
-colorscheme solarized8
-set background=dark
 syntax enable
+set background=dark
+colorscheme solarized8
 
 " Set Vim-Airline Theme
 " let g:airline_theme="onedark"
@@ -195,9 +185,15 @@ Plugin 'bronson/vim-trailing-whitespace'
 Plugin 'mattn/emmet-vim'
 Plugin 'vim-airline/vim-airline'
 Plugin 'rking/ag.vim'
-Plugin 'JazzCore/ctrlp-cmatcher'
 Plugin 'tpope/vim-fugitive'
 Plugin 'elixir-editors/vim-elixir'
+
+" fzf and ctrl
+" I have troubles in the past while using fzf on debian based distributions
+" Use ctrlp as an alternative
+" Plugin 'JazzCore/ctrlp-cmatcher'
+Plugin 'junegunn/fzf'
+Plugin 'junegunn/fzf.vim'
 
 " Syntax support
 Plugin  'sheerun/vim-polyglot'
@@ -221,6 +217,9 @@ Plugin 'Yggdroot/indentLine'
 Plugin 'godlygeek/tabular'
 Plugin 'plasticboy/vim-markdown'
 
+" Solarized Dark
+Plugin 'lifepillar/vim-solarized8'
+
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -238,10 +237,6 @@ set wildignore+=/tmp/,*/tmp/*,*.so,*.swp,*.zip       " Ignore files
 let g:syntastic_check_on_open=1
 let g:syntastic_javascript_checkers = ['eslint']
 
-" Ctrl + P
-set runtimepath^=~/.vim/bundle/ctrlp.vim
-
-
 augroup vimrc_autocmd
   autocmd!
   autocmd BufWritePre * :call <SID>StripTrailingWhitespaces()
@@ -258,33 +253,51 @@ let g:syntastic_mode_map={ 'mode': 'active',
 " GutenTags Cache Dir
 let g:gutentags_cache_dir = '~/.tags_cache'
 
-" Ctrl P stuff
+" -------- Ctrl P stuff -------------
+" -------- Ctrl P stuff -------------
+
+" set runtimepath^=~/.vim/bundle/ctrlp.vim
+
 " Ignore some folders and files for CtrlP indexing
-let g:ctrlp_custom_ignore = {
-  \ 'dir':  '\.git$\|\.yardoc\|public$|log\|tmp$',
-  \ 'file': '\.so$\|\.dat$|\.DS_Store$'
-  \ }
+"let g:ctrlp_custom_ignore = {
+"  \ 'dir':  '\.git$\|\.yardoc\|public$|log\|tmp$',
+"  \ 'file': '\.so$\|\.dat$|\.DS_Store$'
+"  \ }
 
-let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
+"let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
 
-let g:ctrlp_abbrev = {
-    \ 'abbrevs': [
-            \ {
-                \ 'pattern': '\(^@.\+\|\\\@<!:.\+\)\@<! ',
-                \ 'expanded': '',
-                \ 'mode': 'fprz',
-            \ },
-        \ ]
-    \ }
+"let g:ctrlp_abbrev = {
+"    \ 'abbrevs': [
+"            \ {
+"                \ 'pattern': '\(^@.\+\|\\\@<!:.\+\)\@<! ',
+"                \ 'expanded': '',
+"                \ 'mode': 'fprz',
+"            \ },
+"        \ ]
+"    \ }
 
 " Use The Silver Searcher https://github.com/ggreer/the_silver_searcher
-if executable('ag')
-  " Use Ag over Grep
-  set grepprg=ag\ --nogroup\ --nocolor
+"if executable('ag')
+"  " Use Ag over Grep
+"  set grepprg=ag\ --nogroup\ --nocolor
 
   " Use ag in CtrlP for listing files. Lightning fast and respects .gitignore
-  let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
-endif
+"  let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
+"endif
+" -------- Ctrl P stuff -------------
+" -------- Ctrl P stuff -------------
+
+" -------- fzf stuff -------------
+" -------- fzf stuff -------------
+
+set rtp+=~/.fzf
+
+nmap ; :Buffers<CR>
+nmap <C-p> :Files<CR>
+nmap <C-S-p> :GFiles<CR>
+nmap <Leader>r :Tags<CR>
+" -------- fzf stuff -------------
+" -------- fzf stuff -------------
 
 " Move between tabs
 nmap <C-S-right> :tabnext<CR>
