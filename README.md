@@ -1,1 +1,3 @@
-# dotfiles
+# Dotfiles
+
+JorgeGarciaxyz dotfiles
