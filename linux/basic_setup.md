@@ -101,3 +101,11 @@ Shift + F11
 "amixer -D pulse sset Master 5%+ && pkill -RTMIN+10 i3blocks"
 Shift + F12
 ```
+
+#### Gnome Stuff (if using)
+
+Disable show menu bar
+
+```
+gsettings set org.gnome.Terminal.Legacy.Settings default-show-menubar false
+```
