@@ -1,12 +1,13 @@
 ### Create vimrc
 
+
 Mac
 ```
 cp dotfiles/vim/.vimrc ~/
 ```
 Linux
 ```
-cp dotfiles/vim/.vimrc_linux ~/.vimrc
+ln dotfiles/vim/.vimrc_linux ~/.vimrc
 ```
 
 ### Installation
