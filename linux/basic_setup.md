@@ -102,6 +102,17 @@ Shift + F11
 Shift + F12
 ```
 
+### Nightfilter
+
+Check https://wiki.archlinux.org/index.php/Redshift
+
+For "basic" filter with low brightness use
+```
+redshift -P -O 3500K -b 0.9
+```
+
+wip the auto filter
+
 #### Gnome Stuff (if using)
 
 Disable show menu bar
