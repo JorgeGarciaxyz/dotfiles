@@ -20,3 +20,6 @@ xrdb ~/.Xresources
 
 Solarized
 https://github.com/solarized/xresources
+
+Tabs
+https://github.com/shaggytwodope/tabbedex-urxvt

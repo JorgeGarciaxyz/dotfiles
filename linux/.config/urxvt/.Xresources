@@ -5,12 +5,30 @@ URxvt*termName: rxvt-unicode-256color
 
 !URxvt.font: xft:mono:size=10
 ! xterm.faceName: xft:Lucida Grande:medium:size=10
-URxvt.font:     xft:bitstream vera sans mono:size=12:antialias=true
-URxvt.boldFont: xft:bitstream vera sans mono:bold:size=14:antialias=true
+URxvt.font:     xft:Hack:size=12:antialias=true
+URxvt.boldFont: xft:Hack:bold:size=14:antialias=true
 
 ! Disable this, it will imply high intensity foreground/background if true
 URxvt.intensityStyles: false
 
+! Tabs config
+! Perl extension config
+!URxvt.perl-ext-common: tabbedalt, clipboard
+!URxvt.keysym.Control-T:	perl:tabbedalt:new_tab
+
+URxvt.perl-ext-common:  default,tabbedex, clipboard
+URxvt.keysym.C-T: perl:tabbedex:new_tab
+URxvt.keysym.C-Next:	perl:tabbedex:next_tab
+URxvt.keysym.C-Prior:	perl:tabbedex:prev_tab
+
+! clipboard
+URxvt.keysym.S-C-c:   perl:clipboard:copy
+URxvt.keysym.S-C-v:   perl:clipboard:paste
+URxvt.keysym.M-C-v: perl:clipboard:paste_escaped
+
+! ~~ SOLARIZED DARK ~~~
+! ~~ SOLARIZED DARK ~~~
+! ~~ SOLARIZED DARK ~~~
 ! Common
 
 #define S_yellow        #b58900
