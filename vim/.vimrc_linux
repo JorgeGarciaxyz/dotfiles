@@ -140,11 +140,8 @@ set statusline=%F%m%r%h%w      " Status line display
 set statusline+=\ [line/col\ %l,%v]
 set enc=utf-8
 
-" Set glorious 16 colors
-set t_Co=16
-
 " Set 256 color support
-" set t_Co=256
+set t_Co=256
 " set term=screen-256color
 " let $TERM='screen-256color'
 " let &t_AB="\e[48;5;%dm"
@@ -156,9 +153,9 @@ if (has("nvim"))
   let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 endif
 
-"For Neovim > 0.1.5 and Vim > patch 7.4.1799
-if (has("termguicolors"))
-  " set termguicolors
+" Enable true color 启用终端24位色
+if exists('+termguicolors')
+  set termguicolors
 endif
 
 " Set Theme
@@ -166,6 +163,7 @@ endif
 " colorscheme atom-dark
 syntax enable
 set background=dark
+let g:solarized_termcolors=256      " use solarized 256 fallback
 colorscheme solarized8
 
 " Set Vim-Airline Theme
@@ -217,8 +215,7 @@ Plugin 'scrooloose/syntastic'
 Plugin 'Yggdroot/indentLine'
 
 " markdown
-Plugin 'godlygeek/tabular'
-Plugin 'plasticboy/vim-markdown'
+" Plugin 'gabrielelana/vim-markdown'
 
 " Solarized Dark
 Plugin 'lifepillar/vim-solarized8'
