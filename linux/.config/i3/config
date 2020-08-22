@@ -187,7 +187,7 @@ bindsym $mod+r mode "resize"
 
 # Client focused (window)
 # class        border  backgr. text    indicator child_border(margin around windows)
-client.focused #4c7899 #285577 #ffffff #66ff66   #cb4b16
+client.focused #4c7899 #285577 #ffffff #cb4b16   #cb4b16
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
@@ -212,7 +212,6 @@ bar {
 # Wallpaper
 exec feh --bg-fill $MAIN_WALLPAPER
 
-# Load xrdb 
+# Load xrdb
 exec xrdb -load ~/.Xresources
-
 
