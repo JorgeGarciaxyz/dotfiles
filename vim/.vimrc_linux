@@ -96,7 +96,9 @@ endif
 let mapleader=","
 
 " Emmet
-let g:user_emmet_leader_key = '<c-z>' " To use Emmet, always remember to press , after key map
+let g:user_emmet_leader_key=','
+let g:user_emmet_install_global = 0
+autocmd FileType html,css EmmetInstall
 
 " Toggle relative number lines
 "nnoremap <C-n> :call NumberToggle()<CR>
