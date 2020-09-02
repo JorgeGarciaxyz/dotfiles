@@ -1,0 +1,5 @@
+# Executed by GDM at the start of the session
+# ln .xprofile ~/.xprofile
+xrdb -load ~/.Xresources
+~/.fehbg &
+xbindkeys &
