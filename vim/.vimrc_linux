@@ -217,7 +217,7 @@ Plugin 'scrooloose/syntastic'
 Plugin 'Yggdroot/indentLine'
 
 " markdown
-" Plugin 'gabrielelana/vim-markdown'
+Plugin 'gabrielelana/vim-markdown'
 
 " Solarized Dark
 Plugin 'lifepillar/vim-solarized8'
@@ -241,7 +241,7 @@ let g:syntastic_javascript_checkers = ['eslint']
 augroup vimrc_autocmd
   autocmd!
   autocmd BufWritePre * :call <SID>StripTrailingWhitespaces()
-  autocmd BufNewFile,BufReadPost *.md,*.markdown set filetype=markdown
+  " autocmd BufNewFile,BufReadPost *.md,*.markdown set filetype=markdown
   autocmd BufNewFile,BufRead *.mustache,*.hogan,*.hulk,*.hjs set filetype=html.mustache syntax=mustache | runtime! ftplugin/mustache.vim ftplugin/mustache*.vim ftplugin/mustache/*.vim
   autocmd BufNewFile,BufRead *.handlebars,*.hbs set filetype=html.handlebars syntax=mustache | runtime! ftplugin/mustache.vim ftplugin/mustache*.vim ftplugin/mustache/*.vim
 augroup END
@@ -253,6 +253,9 @@ let g:syntastic_mode_map={ 'mode': 'active',
 
 " GutenTags Cache Dir
 let g:gutentags_cache_dir = '~/.tags_cache'
+
+let g:vim_markdown_conceal = 0
+let g:vim_markdown_conceal_code_blocks = 0
 
 " -------- Ctrl P stuff -------------
 " -------- Ctrl P stuff -------------
