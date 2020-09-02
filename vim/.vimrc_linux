@@ -309,3 +309,7 @@ nmap <C-S-left> :tabprevious<CR>
 
 " Make double-<Esc> clear search highlights
 " nnoremap <silent> <Esc><Esc> <Esc>:nohlsearch<CR><Esc>
+
+" Map ctrl s to save https://stackoverflow.com/questions/3446320/in-vim-how-to-map-save-to-ctrl-s
+:nmap <c-s> :w<CR>
+:imap <c-s> <Esc>:w<CR>a
