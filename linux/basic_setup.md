@@ -120,3 +120,28 @@ Disable show menu bar
 ```
 gsettings set org.gnome.Terminal.Legacy.Settings default-show-menubar false
 ```
+
+# Arch from Scratch == pain in the ass (but the 180mb to boot everything with i3 is nice AF)
+
+### Setup the audio
+I try so many things that I dont know which method was the correct one. A combination of alsa, pulse audio and SOF
+https://www.archlinux.org/packages/extra/any/sof-firmware/
+
+Remember to reboot the PC after installing this
+
+### cant start Startx
+
+This bug was caused because I modified my `.bashrc` to start fish and fish would start `tmux` thus making impossible to start `startx` (something related with permissions IDK.
+
+Fix:
+- Remove auto start fish from `.bashrc`
+- Don't set termite as the default terminal, set only as the i3 default terminal
+- on `.bashrc` start tmux ONLY if the current terminal is termite
+- Start fish on tmux
+
+Bashrc snippet (I'll add it later)
+```bash
+if [ $TERM == "xterm-termite" ]; then
+        tmux
+fi
+```
