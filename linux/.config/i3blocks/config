@@ -112,8 +112,13 @@ interval=10
 #
 # The battery instance defaults to 0.
 [battery]
-label=BAT
-label=⚡
+#command=$SCRIPT_DIR/battery/battery
+command=$SCRIPT_DIR/i3blocks-battery-plus/battery-plus
+markup=pango
+instance=BAT0
+_SYMBOLS_ONLY=false
+#label=BAT
+#label=⚡
 interval=30
 
 # Date Time
